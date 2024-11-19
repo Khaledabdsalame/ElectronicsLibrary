@@ -33,8 +33,7 @@ V is the voltage between point 2 and 1 in volts (V).
 
 */
 float E_Voltage_v1(float φ2,float φ1) {
-    float v = φ2 - φ1;
-    return v;
+    return φ2 - φ1 ;
 }
 /*
 In an electrical circuit, the electrical voltage V in volts (V) is equal to the energy consumption E in joules (J)
@@ -51,8 +50,7 @@ Q is the electric charge measured in coulombs (C)
 
 */
 float E_Voltage_v2(float E,float Q) {
-    float v = E / Q;
-    return v; 
+    return  E / Q; 
 }
 /*
 
@@ -196,8 +194,7 @@ t        - time, measured in seconds (s).
 
 */
 float momentry_Voltage(float MaximalVoltage,float w ,float θ,float t) {
-    float v_t = MaximalVoltage * sin((w * t) + θ);
-    return v_t;
+    return  MaximalVoltage * sin((w * t) + θ);
 
 }
 /*
@@ -209,16 +206,14 @@ Vrms -  RMS voltage, measured in volts (V).
 Vmax - maximal voltage (=amplitude of sine), measured in volts (V).
 */
 float RMS_Voltage(float Vmax) {
-    float v = Vmax * RMS_Const;
-    return v;
+    return Vmax * RMS_Const;
 }
 /*
 Peak-to-peak voltage
 Vp-p = 2Vmax
 */
 float VoltageP_P(float Vmax) {
-    float v = 2 * Vmax;
-    return v; 
+    return  2 * Vmax; 
 }
 /*
 I = ΔQ / Δt
@@ -230,16 +225,14 @@ I is the current in amps (A).
 Δt is the time duration in seconds (s).
 */
 float Electric_Current(float q, float t) {
-    float i = q / t;
-    return i;
+    return  q / t;
 
 };
 /*
 The current IR in anps (A) is equal to the resistor's voltage VR in volts (V) divided by the resistance R in ohms (Ω).
 */
 float Electric_current_Ohm(float v ,float R ) {
-    float i = v / R;
-    return i; 
+    return  v / R; 
 }
 
 /*
@@ -304,8 +297,7 @@ VZ - voltage drop on the load measured in volts (V)
 Z  - impedance of the load measured in ohms (Ω)
 */
 float Alterent_Current(float Vz,float Z) {
-    float AC = Vz / Z;
-    return AC;
+    return  Vz / Z;
 
 };
 /*
@@ -319,8 +311,7 @@ f  - frequency measured in hertz (Hz).
 Momentary current
 */
 float  Angular_Frequancy(float frequancy) {
-    float w = 2 * frequancy * Pi;
-    return w;
+    return  2 * frequancy * Pi;
 
 }
 /*
@@ -339,8 +330,7 @@ t        - time, measured in seconds (s).
 */
 float Mumentary_currant(float Ipeak,float w ,float temp, float θ) {
 
-    float i_t = Ipeak * sin((w * temp) + θ);
-    return i_t;
+    return  Ipeak * sin((w * temp) + θ);
 }
 /*
 RMS (effective) current
@@ -348,8 +338,7 @@ Irms =  Ieff =  Ipeak / √2 ≈ 0.707 Ipeak
 */
 float RMS_current(float Ipeak) {
 
-    float rms = Ipeak * RMS_Const;
-    return rms;
+    return Ipeak * RMS_Const;
 
 }
 /*
@@ -357,8 +346,7 @@ Peak-to-peak current
 Ip-p = 2Ipeak
 */
 float Ip_p(float Ipeak) {
-    float i_pp = Ipeak * 2;
-    return i_pp;
+    return Ipeak * 2;
 }
 /*
 The resistance of a conductor is resistivity of the conductor's material times the conductor's length divided by the conductor's cross sectional area.
@@ -374,8 +362,7 @@ l is the length of the conductor in meter (m)
 A is the cross sectional area of the conductor in square meters (m2)
 */
 float Resistance(float ρ ,float l ,float a) {
-    float r = ρ * (l / a);
-    return r; 
+    return  ρ * (l / a); 
 }
 /*
 Resistance calculation with ohm's law
@@ -388,8 +375,7 @@ V is the voltage drop on the resistor in volts (V).
 I is the current of the resistor in amperes (A).
 */
 float Resistance_Ohm(float v, float i) {
-    float r = v / i;
-    return r;
+    return v / i;
 }
 /*
 Temperature effects of resistance
@@ -400,8 +386,7 @@ R1 is the resistance at temperature T1 in ohms (Ω).
 α is the temperature coefficient.
 */
 float Temperature_eff(float r1,float α,float T1,float T2) {
-    float r2 = r1 * (1 + α*(T2 - T1));
-    return r2;
+    return r1 * (1 + α*(T2 - T1));
 }
 /*
 Resistance of resistors in series
@@ -753,8 +738,7 @@ Irms is the rms current = Ipeak/√2 in Amperes [A]
 φ  is the impedance phase angle = phase difference between voltage and current.
 */
 float Power_Real(float Vrms,float Irms,float φ){
-    float p = Vrms * Irms * cos(φ);
-    return p;
+    return Vrms * Irms * cos(φ);
 }
 /*
 Reactive power
@@ -769,8 +753,7 @@ Irms   is the rms current = Ipeak/√2 in Amperes [A]
 
 */
 float Reactive_power(float Vrms,float Irms,float φ) {
-    float p = Vrms * Irms * sin(φ);
-    return p;
+    return Vrms * Irms * sin(φ);
 
  }
 /*
@@ -789,8 +772,7 @@ Irms   is the rms current = Ipeak/√2 in Amperes [A]
 
 */
 float Apperent_power(float vrms,float Irms) {
-    float p = vrms * Irms;
-    return p;
+    return vrms * Irms;
 
 
 }
@@ -959,9 +941,7 @@ q2 is the second charge in coulombs (C).
 r is the distance between the 2 charges in meters (m).
 */
 float coulomb_law(float q1, float q2, float r) {
-    float f;
-    f = (q1 * q2 * coulomb_constant) / pow(r, 2);
-    return f;
+    return (q1 * q2 * coulomb_constant) / pow(r, 2);
 }
 
 /*
@@ -996,8 +976,7 @@ Ein is the input energy consumed in joule (J).
 Eout is the output energy or actual work in joule (J).
 */
 float efficiency(float in, float out) {
-    float e = 100 * (out / in);
-    return e;
+    return 100 * (out / in);
 }
 /*
 Power factor definition
@@ -1010,8 +989,7 @@ P   - real power in watts (W).
 */
 
 float Power_factor(float power_real,float apperant_power) {
-    float pf = power_real * abs(apperant_power);
-    return pf;
+    return power_real * abs(apperant_power);
 
 }
 
