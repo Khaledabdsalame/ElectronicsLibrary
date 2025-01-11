@@ -27,10 +27,6 @@ The library offers a range of functions to help you perform essential calculatio
 - **Function**: `power(string i, string r, float angle, int circuit, int type)`
   - **Description**: Calculates the electrical power in different types of circuits, including AC and DC, based on the provided current, resistance, and phase angle..
 
-### Charge Calculation
-- **Function**: `electric_charge(string i, string r)`
-  - **Description**:Calculates the electric charge based on the relationship between time, current, and charge. .
-  - 
 
 ## Installation
 
