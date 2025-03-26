@@ -42,7 +42,7 @@ Here is an example demonstrating how to use the library for a basic calculation:
 #include <iostream>
 
 int main() {
-    vector voltages = {3.0, 4.0, 5.0};
+    vector <float> voltages = {3.0, 4.0, 5.0};
     float total_voltage = Voltage_Series(voltages);
     std::cout << "The voltage is: " << total_voltage << " V" << std::endl;
     
